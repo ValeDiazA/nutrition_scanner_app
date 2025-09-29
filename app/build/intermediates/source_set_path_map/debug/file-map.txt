@@ -1,0 +1,76 @@
+com.nutritionscanner.app-jetified-core-ktx-1.12.0-0 C:\Users\Diego Poveda\.gradle\caches\transforms-3\04dab196345207c854dcdc6bfe69fe21\transformed\jetified-core-ktx-1.12.0\res
+com.nutritionscanner.app-appcompat-1.6.1-1 C:\Users\Diego Poveda\.gradle\caches\transforms-3\0792332e3868a298b4c6e2a7044e3717\transformed\appcompat-1.6.1\res
+com.nutritionscanner.app-jetified-lifecycle-process-2.7.0-2 C:\Users\Diego Poveda\.gradle\caches\transforms-3\18dc3bac9901e34b95b29b97c72f622a\transformed\jetified-lifecycle-process-2.7.0\res
+com.nutritionscanner.app-jetified-camera-view-1.3.1-3 C:\Users\Diego Poveda\.gradle\caches\transforms-3\1a6c0e3fbd68e0001dfff45ba56c47d5\transformed\jetified-camera-view-1.3.1\res
+com.nutritionscanner.app-jetified-runtime-saveable-release-4 C:\Users\Diego Poveda\.gradle\caches\transforms-3\1d6bd3af6e7cf9765cb8d213f196ba8e\transformed\jetified-runtime-saveable-release\res
+com.nutritionscanner.app-jetified-lifecycle-livedata-core-ktx-2.7.0-5 C:\Users\Diego Poveda\.gradle\caches\transforms-3\1e98f48937bdaa550119a8da4c862c45\transformed\jetified-lifecycle-livedata-core-ktx-2.7.0\res
+com.nutritionscanner.app-jetified-savedstate-1.2.1-6 C:\Users\Diego Poveda\.gradle\caches\transforms-3\1ed23f77c834171cea654a3c77a42d2d\transformed\jetified-savedstate-1.2.1\res
+com.nutritionscanner.app-jetified-activity-ktx-1.8.2-7 C:\Users\Diego Poveda\.gradle\caches\transforms-3\28d0ba64eea4fd125738449ea5a3d449\transformed\jetified-activity-ktx-1.8.2\res
+com.nutritionscanner.app-jetified-room-ktx-2.6.1-8 C:\Users\Diego Poveda\.gradle\caches\transforms-3\2cd7797fce90a2a79f940512e096325e\transformed\jetified-room-ktx-2.6.1\res
+com.nutritionscanner.app-jetified-appcompat-resources-1.6.1-9 C:\Users\Diego Poveda\.gradle\caches\transforms-3\2d40b9ccde81dd916779e75ea77ded7f\transformed\jetified-appcompat-resources-1.6.1\res
+com.nutritionscanner.app-jetified-ui-release-10 C:\Users\Diego Poveda\.gradle\caches\transforms-3\2f0797920955c944c5a372290efe4abe\transformed\jetified-ui-release\res
+com.nutritionscanner.app-jetified-emoji2-1.4.0-11 C:\Users\Diego Poveda\.gradle\caches\transforms-3\32cbad52dd6e18d47e81d9fd54335f5e\transformed\jetified-emoji2-1.4.0\res
+com.nutritionscanner.app-navigation-runtime-ktx-2.7.5-12 C:\Users\Diego Poveda\.gradle\caches\transforms-3\3a9ca8b9880e77a04f68db1e28dd98fc\transformed\navigation-runtime-ktx-2.7.5\res
+com.nutritionscanner.app-jetified-ui-tooling-preview-release-13 C:\Users\Diego Poveda\.gradle\caches\transforms-3\3b500db9fbe9d05d440e28cc4c75852d\transformed\jetified-ui-tooling-preview-release\res
+com.nutritionscanner.app-jetified-material-release-14 C:\Users\Diego Poveda\.gradle\caches\transforms-3\3e2022719905f7e77bf4d3b9f7dc1d57\transformed\jetified-material-release\res
+com.nutritionscanner.app-jetified-ui-text-release-15 C:\Users\Diego Poveda\.gradle\caches\transforms-3\43d41f9221fae87b9d6ac1d8df95a3b9\transformed\jetified-ui-text-release\res
+com.nutritionscanner.app-jetified-annotation-experimental-1.3.1-16 C:\Users\Diego Poveda\.gradle\caches\transforms-3\45a491bda1cef0d6bbe0bc589e64080b\transformed\jetified-annotation-experimental-1.3.1\res
+com.nutritionscanner.app-jetified-play-services-base-18.1.0-17 C:\Users\Diego Poveda\.gradle\caches\transforms-3\45bda043d530d4f14acf05f637a2719a\transformed\jetified-play-services-base-18.1.0\res
+com.nutritionscanner.app-jetified-material-ripple-release-18 C:\Users\Diego Poveda\.gradle\caches\transforms-3\4a3bffacc3a1ba7b970b98bd425e9047\transformed\jetified-material-ripple-release\res
+com.nutritionscanner.app-navigation-runtime-2.7.5-19 C:\Users\Diego Poveda\.gradle\caches\transforms-3\4aa3f96cea22651671455087da121517\transformed\navigation-runtime-2.7.5\res
+com.nutritionscanner.app-jetified-datastore-1.0.0-20 C:\Users\Diego Poveda\.gradle\caches\transforms-3\4b77882c04d35b0d6a75e9f328ae8197\transformed\jetified-datastore-1.0.0\res
+com.nutritionscanner.app-jetified-hilt-navigation-1.1.0-21 C:\Users\Diego Poveda\.gradle\caches\transforms-3\507176937dddc9bff14bb52fa511ea62\transformed\jetified-hilt-navigation-1.1.0\res
+com.nutritionscanner.app-jetified-ui-geometry-release-22 C:\Users\Diego Poveda\.gradle\caches\transforms-3\516d2196b0338457eaa12f6416743ac6\transformed\jetified-ui-geometry-release\res
+com.nutritionscanner.app-jetified-emoji2-views-helper-1.4.0-23 C:\Users\Diego Poveda\.gradle\caches\transforms-3\51ee769cdd37a3494ebb90ebb21a2eaf\transformed\jetified-emoji2-views-helper-1.4.0\res
+com.nutritionscanner.app-jetified-ui-tooling-release-24 C:\Users\Diego Poveda\.gradle\caches\transforms-3\5a2316a881ff3d0f351e5ff2abb46ac4\transformed\jetified-ui-tooling-release\res
+com.nutritionscanner.app-core-1.12.0-25 C:\Users\Diego Poveda\.gradle\caches\transforms-3\5bb4e1a6df63c55d346dcc1e0af5b423\transformed\core-1.12.0\res
+com.nutritionscanner.app-jetified-camera-camera2-1.3.1-26 C:\Users\Diego Poveda\.gradle\caches\transforms-3\5be9c2d948ea48511ad2a8e1e580865f\transformed\jetified-camera-camera2-1.3.1\res
+com.nutritionscanner.app-jetified-androidsvg-aar-1.4-27 C:\Users\Diego Poveda\.gradle\caches\transforms-3\5dfc48b58668556b70316cb3cac6a858\transformed\jetified-androidsvg-aar-1.4\res
+com.nutritionscanner.app-jetified-material-icons-extended-release-28 C:\Users\Diego Poveda\.gradle\caches\transforms-3\5eaeb7d68d25ba659907c7c68c8e4613\transformed\jetified-material-icons-extended-release\res
+com.nutritionscanner.app-jetified-datastore-preferences-1.0.0-29 C:\Users\Diego Poveda\.gradle\caches\transforms-3\60197e1beb09a3da066105db73982c23\transformed\jetified-datastore-preferences-1.0.0\res
+com.nutritionscanner.app-core-runtime-2.2.0-30 C:\Users\Diego Poveda\.gradle\caches\transforms-3\61128e32db5bd1830aa991b9b313c437\transformed\core-runtime-2.2.0\res
+com.nutritionscanner.app-lifecycle-livedata-core-2.7.0-31 C:\Users\Diego Poveda\.gradle\caches\transforms-3\61e5dc8d152ff919f56350fcd44e97cc\transformed\lifecycle-livedata-core-2.7.0\res
+com.nutritionscanner.app-jetified-ui-unit-release-32 C:\Users\Diego Poveda\.gradle\caches\transforms-3\65cd775565a536e44eac963270731788\transformed\jetified-ui-unit-release\res
+com.nutritionscanner.app-navigation-common-ktx-2.7.5-33 C:\Users\Diego Poveda\.gradle\caches\transforms-3\66cd3a08b4b5430495b9c73ea7b02d08\transformed\navigation-common-ktx-2.7.5\res
+com.nutritionscanner.app-jetified-foundation-release-34 C:\Users\Diego Poveda\.gradle\caches\transforms-3\689086b95e2114139c750c5d13674e7f\transformed\jetified-foundation-release\res
+com.nutritionscanner.app-jetified-lifecycle-viewmodel-ktx-2.7.0-35 C:\Users\Diego Poveda\.gradle\caches\transforms-3\68e0f8422a7880429fdf8b995160673e\transformed\jetified-lifecycle-viewmodel-ktx-2.7.0\res
+com.nutritionscanner.app-lifecycle-viewmodel-2.7.0-36 C:\Users\Diego Poveda\.gradle\caches\transforms-3\68ef7bfb6c9df9446d1de055ae17c6d3\transformed\lifecycle-viewmodel-2.7.0\res
+com.nutritionscanner.app-jetified-navigation-compose-2.7.5-37 C:\Users\Diego Poveda\.gradle\caches\transforms-3\707db97ee532b4de074e1e2ea12c02fc\transformed\jetified-navigation-compose-2.7.5\res
+com.nutritionscanner.app-jetified-profileinstaller-1.3.1-38 C:\Users\Diego Poveda\.gradle\caches\transforms-3\71b48f5259c98f242f235f7379afda29\transformed\jetified-profileinstaller-1.3.1\res
+com.nutritionscanner.app-room-runtime-2.6.1-39 C:\Users\Diego Poveda\.gradle\caches\transforms-3\762575b6ccba4a52754e50b1d5e73e00\transformed\room-runtime-2.6.1\res
+com.nutritionscanner.app-sqlite-2.4.0-40 C:\Users\Diego Poveda\.gradle\caches\transforms-3\7caa5f9dd54ab8c72bc881ba81c1c23d\transformed\sqlite-2.4.0\res
+com.nutritionscanner.app-jetified-play-services-basement-18.1.0-41 C:\Users\Diego Poveda\.gradle\caches\transforms-3\7eed69863b10a0ede276c606b5d29632\transformed\jetified-play-services-basement-18.1.0\res
+com.nutritionscanner.app-jetified-camera-video-1.3.1-42 C:\Users\Diego Poveda\.gradle\caches\transforms-3\81965226559de96bbd74036a47e5a7db\transformed\jetified-camera-video-1.3.1\res
+com.nutritionscanner.app-jetified-lifecycle-viewmodel-compose-2.7.0-43 C:\Users\Diego Poveda\.gradle\caches\transforms-3\83801091a3264c2213d4b5e84821780e\transformed\jetified-lifecycle-viewmodel-compose-2.7.0\res
+com.nutritionscanner.app-jetified-hilt-navigation-compose-1.1.0-44 C:\Users\Diego Poveda\.gradle\caches\transforms-3\83f1590a1d2330d6abadd96b10f5cfd7\transformed\jetified-hilt-navigation-compose-1.1.0\res
+com.nutritionscanner.app-sqlite-framework-2.4.0-45 C:\Users\Diego Poveda\.gradle\caches\transforms-3\8894480b3be5ec66c6af0f207144bf25\transformed\sqlite-framework-2.4.0\res
+com.nutritionscanner.app-lifecycle-runtime-2.7.0-46 C:\Users\Diego Poveda\.gradle\caches\transforms-3\8d7d6b64c587e22b123e2d88e9edd13f\transformed\lifecycle-runtime-2.7.0\res
+com.nutritionscanner.app-jetified-activity-compose-1.8.2-47 C:\Users\Diego Poveda\.gradle\caches\transforms-3\95bcb097043b7d6e6264e9a6230858ed\transformed\jetified-activity-compose-1.8.2\res
+com.nutritionscanner.app-jetified-camera-lifecycle-1.3.1-48 C:\Users\Diego Poveda\.gradle\caches\transforms-3\96be6d7817605d00440577c6660589f5\transformed\jetified-camera-lifecycle-1.3.1\res
+com.nutritionscanner.app-jetified-ui-tooling-data-release-49 C:\Users\Diego Poveda\.gradle\caches\transforms-3\9c0374237645bd68a022c8cb5d8f6035\transformed\jetified-ui-tooling-data-release\res
+com.nutritionscanner.app-jetified-savedstate-ktx-1.2.1-50 C:\Users\Diego Poveda\.gradle\caches\transforms-3\9f7aaf85dc6c8044add5850fff11e0ef\transformed\jetified-savedstate-ktx-1.2.1\res
+com.nutritionscanner.app-jetified-animation-core-release-51 C:\Users\Diego Poveda\.gradle\caches\transforms-3\a03d1f94df3fa126d944c0e81e7b248e\transformed\jetified-animation-core-release\res
+com.nutritionscanner.app-jetified-customview-poolingcontainer-1.0.0-52 C:\Users\Diego Poveda\.gradle\caches\transforms-3\a0d512bcd21bbba22933b764cae65e58\transformed\jetified-customview-poolingcontainer-1.0.0\res
+com.nutritionscanner.app-jetified-startup-runtime-1.1.1-53 C:\Users\Diego Poveda\.gradle\caches\transforms-3\ad1f3d2b8977eab0b7283a8b3836a514\transformed\jetified-startup-runtime-1.1.1\res
+com.nutritionscanner.app-jetified-material-icons-core-release-54 C:\Users\Diego Poveda\.gradle\caches\transforms-3\b7d42fdadc606322f5217e718b90c81b\transformed\jetified-material-icons-core-release\res
+com.nutritionscanner.app-navigation-common-2.7.5-55 C:\Users\Diego Poveda\.gradle\caches\transforms-3\b95d627972f13d1f5da924c34e7f53c2\transformed\navigation-common-2.7.5\res
+com.nutritionscanner.app-jetified-lifecycle-runtime-ktx-2.7.0-56 C:\Users\Diego Poveda\.gradle\caches\transforms-3\bdb8ca60e822bea093fdd1a0a79ebf68\transformed\jetified-lifecycle-runtime-ktx-2.7.0\res
+com.nutritionscanner.app-jetified-animation-release-57 C:\Users\Diego Poveda\.gradle\caches\transforms-3\ca6901014c73363903277bbec9543389\transformed\jetified-animation-release\res
+com.nutritionscanner.app-jetified-runtime-release-58 C:\Users\Diego Poveda\.gradle\caches\transforms-3\caa192b07d6fe561a78f5b8b99678ea1\transformed\jetified-runtime-release\res
+com.nutritionscanner.app-jetified-ui-graphics-release-59 C:\Users\Diego Poveda\.gradle\caches\transforms-3\cedaecdf4145465e57b9b406fccd6483\transformed\jetified-ui-graphics-release\res
+com.nutritionscanner.app-jetified-activity-1.8.2-60 C:\Users\Diego Poveda\.gradle\caches\transforms-3\dd2f19dae5af356bf0c2aefbf1819a7e\transformed\jetified-activity-1.8.2\res
+com.nutritionscanner.app-jetified-coil-base-2.5.0-61 C:\Users\Diego Poveda\.gradle\caches\transforms-3\e0d188e4955ee90cdd4415afafb08837\transformed\jetified-coil-base-2.5.0\res
+com.nutritionscanner.app-jetified-foundation-layout-release-62 C:\Users\Diego Poveda\.gradle\caches\transforms-3\e288a232aaa622fdb7e44c47aa898a1b\transformed\jetified-foundation-layout-release\res
+com.nutritionscanner.app-jetified-ui-util-release-63 C:\Users\Diego Poveda\.gradle\caches\transforms-3\ea5bacfcaca82ac9b651395efd917ac7\transformed\jetified-ui-util-release\res
+com.nutritionscanner.app-lifecycle-livedata-2.7.0-64 C:\Users\Diego Poveda\.gradle\caches\transforms-3\eb7653fd78bd097b0c6f93a1fc3e7776\transformed\lifecycle-livedata-2.7.0\res
+com.nutritionscanner.app-jetified-lifecycle-viewmodel-savedstate-2.7.0-65 C:\Users\Diego Poveda\.gradle\caches\transforms-3\ed11b6c3ba0bf9640816d1ad2b985de3\transformed\jetified-lifecycle-viewmodel-savedstate-2.7.0\res
+com.nutritionscanner.app-fragment-1.5.1-66 C:\Users\Diego Poveda\.gradle\caches\transforms-3\f3cbeb9ef33e762e05a1f72a9492c3d3\transformed\fragment-1.5.1\res
+com.nutritionscanner.app-jetified-material3-1.1.2-67 C:\Users\Diego Poveda\.gradle\caches\transforms-3\f8203f32ed6c22cacae4f051c44ee278\transformed\jetified-material3-1.1.2\res
+com.nutritionscanner.app-jetified-ui-test-manifest-1.5.4-68 C:\Users\Diego Poveda\.gradle\caches\transforms-3\f8fcb75e847af8d9b621b83b00acc0a2\transformed\jetified-ui-test-manifest-1.5.4\res
+com.nutritionscanner.app-jetified-camera-core-1.3.1-69 C:\Users\Diego Poveda\.gradle\caches\transforms-3\fe2b4b307119e8d42f20678e2f684751\transformed\jetified-camera-core-1.3.1\res
+com.nutritionscanner.app-resValues-70 D:\VSC\nutrition_scanner_app\app\build\generated\res\resValues\debug
+com.nutritionscanner.app-packageDebugResources-71 D:\VSC\nutrition_scanner_app\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.nutritionscanner.app-packageDebugResources-72 D:\VSC\nutrition_scanner_app\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.nutritionscanner.app-merged_res-73 D:\VSC\nutrition_scanner_app\app\build\intermediates\merged_res\debug
+com.nutritionscanner.app-debug-74 D:\VSC\nutrition_scanner_app\app\src\debug\res
+com.nutritionscanner.app-main-75 D:\VSC\nutrition_scanner_app\app\src\main\res

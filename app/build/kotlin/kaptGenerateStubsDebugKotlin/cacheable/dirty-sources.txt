@@ -1,0 +1,17 @@
+D:\VSC\nutrition_scanner_app\app\src\main\java\com\nutritionscanner\data\stellar\StellarWalletManager.kt
+D:\VSC\nutrition_scanner_app\app\src\main\java\com\nutritionscanner\data\database\NutritionDatabase.kt
+D:\VSC\nutrition_scanner_app\app\src\main\java\com\nutritionscanner\presentation\ui\marketplace\MarketplaceScreen.kt
+D:\VSC\nutrition_scanner_app\app\src\main\java\com\nutritionscanner\domain\model\Stellar.kt
+D:\VSC\nutrition_scanner_app\app\src\main\java\com\nutritionscanner\di\DatabaseModule.kt
+D:\VSC\nutrition_scanner_app\app\src\main\java\com\nutritionscanner\presentation\ui\activities\MainActivity.kt
+D:\VSC\nutrition_scanner_app\app\src\main\java\com\nutritionscanner\data\ocr\MLKitTextRecognizer.kt
+D:\VSC\nutrition_scanner_app\app\src\main\java\com\nutritionscanner\domain\model\Product.kt
+D:\VSC\nutrition_scanner_app\app\src\main\java\com\nutritionscanner\NutritionScannerApplication.kt
+D:\VSC\nutrition_scanner_app\app\src\main\java\com\nutritionscanner\domain\model\User.kt
+D:\VSC\nutrition_scanner_app\app\src\main\java\com\nutritionscanner\data\analysis\NutritionalScoreCalculator.kt
+D:\VSC\nutrition_scanner_app\app\src\main\java\com\nutritionscanner\data\stellar\StellarPreferences.kt
+D:\VSC\nutrition_scanner_app\app\src\main\java\com\nutritionscanner\presentation\ui\scan\ScanScreen.kt
+D:\VSC\nutrition_scanner_app\app\src\main\java\com\nutritionscanner\data\database\Daos.kt
+D:\VSC\nutrition_scanner_app\app\src\main\java\com\nutritionscanner\presentation\ui\analysis\AnalysisScreen.kt
+D:\VSC\nutrition_scanner_app\app\src\main\java\com\nutritionscanner\data\database\DatabaseConverters.kt
+D:\VSC\nutrition_scanner_app\app\src\main\java\com\nutritionscanner\data\analysis\IngredientAnalyzer.kt
