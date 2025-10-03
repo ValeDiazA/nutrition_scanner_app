@@ -88,7 +88,7 @@ fun NutritionScannerApp() {
                                     .data("android.resource://com.nutritionscanner/drawable/app_logo")
                                     .build(),
                                 contentDescription = "App Logo",
-                                modifier = Modifier.size(120.dp)
+                                modifier = Modifier.size(250.dp)
                             )
                         }
                     }
