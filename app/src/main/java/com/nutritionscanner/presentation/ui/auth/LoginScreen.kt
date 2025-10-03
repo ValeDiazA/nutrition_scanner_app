@@ -89,7 +89,7 @@ fun LoginScreen(
                             .data("android.resource://com.nutritionscanner/drawable/app_logo")
                             .build(),
                         contentDescription = "App Logo",
-                        modifier = Modifier.size(64.dp)
+                        modifier = Modifier.size(120.dp)
                     )
                 }
             }
