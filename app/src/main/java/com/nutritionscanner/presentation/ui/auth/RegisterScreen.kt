@@ -19,6 +19,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.nutritionscanner.domain.model.AuthState
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -262,7 +263,8 @@ fun RegisterScreen(
                     }
                     
                     // Mensaje de error general
-                    if (uiState is AuthState.Error) {
+                    val currentUiState = uiState
+                    if (currentUiState is AuthState.Error) {
                         Card(
                             modifier = Modifier.fillMaxWidth(),
                             colors = CardDefaults.cardColors(
@@ -270,7 +272,7 @@ fun RegisterScreen(
                             )
                         ) {
                             Text(
-                                text = uiState.message,
+                                text = currentUiState.message,
                                 color = MaterialTheme.colorScheme.onErrorContainer,
                                 style = MaterialTheme.typography.bodyMedium,
                                 modifier = Modifier.padding(12.dp)

@@ -550,22 +550,23 @@ fun ProfileScreen(navController: NavHostController, appAuthViewModel: AppAuthVie
                 
                 Spacer(modifier = Modifier.height(16.dp))
                 
-                when (authState) {
+                val currentAuthState = authState
+                when (currentAuthState) {
                     is AuthState.Success -> {
                         Text(
-                            text = authState.user.name,
+                            text = currentAuthState.user.name,
                             style = MaterialTheme.typography.titleLarge,
                             fontWeight = FontWeight.Bold
                         )
                         
                         Text(
-                            text = "Nivel ${authState.user.level} • ${authState.user.totalPoints} puntos",
+                            text = "Nivel ${currentAuthState.user.level} • ${currentAuthState.user.totalPoints} puntos",
                             style = MaterialTheme.typography.bodyMedium,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                         
                         Text(
-                            text = authState.user.email,
+                            text = currentAuthState.user.email,
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
@@ -632,24 +633,25 @@ fun ProfileScreen(navController: NavHostController, appAuthViewModel: AppAuthVie
                 
                 Spacer(modifier = Modifier.height(16.dp))
                 
-                when (authState) {
+                val currentAuthStateStats = authState
+                when (currentAuthStateStats) {
                     is AuthState.Success -> {
                         Row(
                             modifier = Modifier.fillMaxWidth(),
                             horizontalArrangement = Arrangement.SpaceEvenly
                         ) {
                             StatItem(
-                                "${authState.user.scannedProducts}", 
+                                "${currentAuthStateStats.user.scannedProducts}", 
                                 "Productos\nEscaneados", 
                                 Icons.Default.QrCodeScanner
                             )
                             StatItem(
-                                "${authState.user.stellarBalance} XLM", 
+                                "${currentAuthStateStats.user.stellarBalance} XLM", 
                                 "Balance\nStellar", 
                                 Icons.Default.AccountBalanceWallet
                             )
                             StatItem(
-                                "${authState.user.healthyChoices}", 
+                                "${currentAuthStateStats.user.healthyChoices}", 
                                 "Elecciones\nSaludables", 
                                 Icons.Default.Favorite
                             )
