@@ -24,6 +24,8 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.nutritionscanner.domain.model.AuthState
+import coil.compose.AsyncImage
+import coil.request.ImageRequest
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -82,11 +84,12 @@ fun LoginScreen(
                     modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center
                 ) {
-                    Icon(
-                        imageVector = Icons.Default.QrCodeScanner,
+                    AsyncImage(
+                        model = ImageRequest.Builder(LocalContext.current)
+                            .data("android.resource://com.nutritionscanner/drawable/app_logo")
+                            .build(),
                         contentDescription = "App Logo",
-                        modifier = Modifier.size(64.dp),
-                        tint = MaterialTheme.colorScheme.primary
+                        modifier = Modifier.size(64.dp)
                     )
                 }
             }
