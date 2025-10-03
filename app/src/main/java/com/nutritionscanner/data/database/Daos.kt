@@ -32,6 +32,24 @@ interface UserDao {
     @Query("SELECT * FROM users WHERE id = :id")
     suspend fun getUserById(id: String): UserEntity?
     
+    @Query("SELECT * FROM users WHERE email = :email")
+    suspend fun getUserByEmail(email: String): UserEntity?
+    
+    @Query("SELECT * FROM users WHERE email = :email AND passwordHash = :passwordHash")
+    suspend fun loginUser(email: String, passwordHash: String): UserEntity?
+    
+    @Query("SELECT * FROM users WHERE isLoggedIn = 1 LIMIT 1")
+    suspend fun getLoggedInUser(): UserEntity?
+    
+    @Query("UPDATE users SET isLoggedIn = 1, lastLoginAt = :loginTime WHERE id = :userId")
+    suspend fun markUserAsLoggedIn(userId: String, loginTime: Long)
+    
+    @Query("UPDATE users SET isLoggedIn = 0 WHERE id = :userId")
+    suspend fun markUserAsLoggedOut(userId: String)
+    
+    @Query("UPDATE users SET isLoggedIn = 0")
+    suspend fun logoutAllUsers()
+    
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertUser(user: UserEntity)
     

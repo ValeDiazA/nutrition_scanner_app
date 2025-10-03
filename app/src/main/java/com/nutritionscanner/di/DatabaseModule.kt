@@ -23,7 +23,9 @@ object DatabaseModule {
             context,
             NutritionDatabase::class.java,
             "nutrition_database"
-        ).build()
+        )
+        .fallbackToDestructiveMigration() // Para desarrollo, en producción usar migraciones
+        .build()
     }
     
     @Provides

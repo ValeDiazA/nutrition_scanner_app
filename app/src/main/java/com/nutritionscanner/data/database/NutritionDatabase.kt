@@ -5,7 +5,7 @@ import com.nutritionscanner.domain.model.*
 
 @Database(
     entities = [ProductEntity::class, UserEntity::class],
-    version = 1,
+    version = 2,
     exportSchema = false
 )
 @TypeConverters(DatabaseConverters::class)
@@ -32,6 +32,10 @@ data class UserEntity(
     @PrimaryKey val id: String,
     val name: String,
     val email: String,
+    val passwordHash: String,
+    val isLoggedIn: Boolean = false,
+    val createdAt: Long,
+    val lastLoginAt: Long?,
     val level: Int,
     val totalPoints: Int,
     val stellarPublicKey: String?,

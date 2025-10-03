@@ -21,12 +21,18 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.AsyncImage
 import coil.decode.SvgDecoder
 import coil.request.ImageRequest
 import com.nutritionscanner.presentation.ui.scan.ScanScreen
 import com.nutritionscanner.presentation.ui.analysis.AnalysisScreen
 import com.nutritionscanner.presentation.ui.marketplace.MarketplaceScreen
+import com.nutritionscanner.presentation.ui.auth.LoginScreen
+import com.nutritionscanner.presentation.ui.auth.RegisterScreen
+import com.nutritionscanner.presentation.ui.auth.AppAuthViewModel
+import com.nutritionscanner.presentation.ui.auth.AuthViewModel
+import com.nutritionscanner.domain.model.AuthState
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -49,32 +55,119 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun NutritionScannerApp() {
     val navController = rememberNavController()
+    val appAuthViewModel: AppAuthViewModel = hiltViewModel()
+    val isAuthenticated by appAuthViewModel.isAuthenticated.collectAsState()
+    val isLoading by appAuthViewModel.isLoading.collectAsState()
+    
+    when {
+        isLoading -> {
+            // Pantalla de carga mientras verificamos el estado de autenticación
+            Box(
+                modifier = Modifier.fillMaxSize(),
+                contentAlignment = Alignment.Center
+            ) {
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.Center
+                ) {
+                    Card(
+                        modifier = Modifier
+                            .size(120.dp)
+                            .padding(bottom = 24.dp),
+                        shape = MaterialTheme.shapes.large,
+                        colors = CardDefaults.cardColors(
+                            containerColor = MaterialTheme.colorScheme.primaryContainer
+                        )
+                    ) {
+                        Box(
+                            modifier = Modifier.fillMaxSize(),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.QrCodeScanner,
+                                contentDescription = "App Logo",
+                                modifier = Modifier.size(64.dp),
+                                tint = MaterialTheme.colorScheme.primary
+                            )
+                        }
+                    }
+                    
+                    Text(
+                        text = "Nutrition Scanner",
+                        style = MaterialTheme.typography.headlineMedium,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.primary
+                    )
+                    
+                    Spacer(modifier = Modifier.height(24.dp))
+                    
+                    CircularProgressIndicator(
+                        color = MaterialTheme.colorScheme.primary
+                    )
+                }
+            }
+        }
+        isAuthenticated == true -> {
+            // Usuario autenticado, mostrar la aplicación principal
+            MainApp(navController, appAuthViewModel)
+        }
+        else -> {
+            // Usuario no autenticado, mostrar pantallas de auth
+            AuthFlow(navController, appAuthViewModel)
+        }
+    }
+}
+
+@Composable
+fun AuthFlow(navController: NavHostController, appAuthViewModel: AppAuthViewModel) {
+    NavHost(
+        navController = navController,
+        startDestination = "login"
+    ) {
+        composable("login") {
+            LoginScreen(navController)
+        }
+        composable("register") {
+            RegisterScreen(navController)
+        }
+        composable("main") {
+            // Redirigir al flujo principal
+            LaunchedEffect(Unit) {
+                appAuthViewModel.refreshAuthStatus()
+            }
+        }
+    }
+}
+
+@Composable
+fun MainApp(navController: NavHostController, appAuthViewModel: AppAuthViewModel) {
+    val mainNavController = rememberNavController()
     
     Scaffold(
         bottomBar = {
-            BottomNavigationBar(navController)
+            BottomNavigationBar(mainNavController)
         }
     ) { paddingValues ->
         NavHost(
-            navController = navController,
+            navController = mainNavController,
             startDestination = "home",
             modifier = Modifier.padding(paddingValues)
         ) {
             composable("home") {
-                HomeScreen(navController)
+                HomeScreen(mainNavController)
             }
             composable("scan") {
-                ScanScreen(navController)
+                ScanScreen(mainNavController)
             }
             composable("analysis/{productId}") { backStackEntry ->
                 val productId = backStackEntry.arguments?.getString("productId") ?: ""
-                AnalysisScreen(productId, navController)
+                AnalysisScreen(productId, mainNavController)
             }
             composable("marketplace") {
-                MarketplaceScreen(navController)
+                MarketplaceScreen(mainNavController)
             }
             composable("profile") {
-                ProfileScreen(navController)
+                ProfileScreen(mainNavController, appAuthViewModel)
             }
         }
     }
@@ -414,7 +507,20 @@ fun StellarInfoCard() {
 }
 
 @Composable
-fun ProfileScreen(navController: NavHostController) {
+fun ProfileScreen(navController: NavHostController, appAuthViewModel: AppAuthViewModel) {
+    val authViewModel: AuthViewModel = hiltViewModel()
+    val authState by authViewModel.authState.collectAsState()
+    
+    // Observar cambios en el estado de autenticación
+    LaunchedEffect(authState) {
+        when (authState) {
+            is AuthState.LoggedOut -> {
+                appAuthViewModel.refreshAuthStatus()
+            }
+            else -> {}
+        }
+    }
+    
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -444,17 +550,40 @@ fun ProfileScreen(navController: NavHostController) {
                 
                 Spacer(modifier = Modifier.height(16.dp))
                 
-                Text(
-                    text = "Usuario Demo",
-                    style = MaterialTheme.typography.titleLarge,
-                    fontWeight = FontWeight.Bold
-                )
-                
-                Text(
-                    text = "Nivel 1 • 0 puntos",
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
+                when (authState) {
+                    is AuthState.Success -> {
+                        Text(
+                            text = authState.user.name,
+                            style = MaterialTheme.typography.titleLarge,
+                            fontWeight = FontWeight.Bold
+                        )
+                        
+                        Text(
+                            text = "Nivel ${authState.user.level} • ${authState.user.totalPoints} puntos",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                        
+                        Text(
+                            text = authState.user.email,
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                    else -> {
+                        Text(
+                            text = "Usuario Demo",
+                            style = MaterialTheme.typography.titleLarge,
+                            fontWeight = FontWeight.Bold
+                        )
+                        
+                        Text(
+                            text = "Nivel 1 • 0 puntos",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                }
                 
                 Spacer(modifier = Modifier.height(20.dp))
                 
@@ -463,6 +592,131 @@ fun ProfileScreen(navController: NavHostController) {
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Text("Crear Wallet Stellar")
+                }
+                
+                Spacer(modifier = Modifier.height(12.dp))
+                
+                OutlinedButton(
+                    onClick = { authViewModel.logout() },
+                    modifier = Modifier.fillMaxWidth(),
+                    enabled = authState !is AuthState.Loading
+                ) {
+                    if (authState is AuthState.Loading) {
+                        CircularProgressIndicator(
+                            modifier = Modifier.size(16.dp),
+                            color = MaterialTheme.colorScheme.onSurface
+                        )
+                    } else {
+                        Icon(Icons.Default.Logout, contentDescription = null)
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text("Cerrar Sesión")
+                    }
+                }
+            }
+        }
+        
+        Spacer(modifier = Modifier.height(24.dp))
+        
+        // Card de estadísticas del usuario
+        Card(
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Column(
+                modifier = Modifier.padding(16.dp)
+            ) {
+                Text(
+                    text = "Estadísticas",
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold
+                )
+                
+                Spacer(modifier = Modifier.height(16.dp))
+                
+                when (authState) {
+                    is AuthState.Success -> {
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceEvenly
+                        ) {
+                            StatItem(
+                                "${authState.user.scannedProducts}", 
+                                "Productos\nEscaneados", 
+                                Icons.Default.QrCodeScanner
+                            )
+                            StatItem(
+                                "${authState.user.stellarBalance} XLM", 
+                                "Balance\nStellar", 
+                                Icons.Default.AccountBalanceWallet
+                            )
+                            StatItem(
+                                "${authState.user.healthyChoices}", 
+                                "Elecciones\nSaludables", 
+                                Icons.Default.Favorite
+                            )
+                        }
+                    }
+                    else -> {
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceEvenly
+                        ) {
+                            StatItem("0", "Productos\nEscaneados", Icons.Default.QrCodeScanner)
+                            StatItem("0 XLM", "Balance\nStellar", Icons.Default.AccountBalanceWallet)
+                            StatItem("0", "Elecciones\nSaludables", Icons.Default.Favorite)
+                        }
+                    }
+                }
+            }
+        }
+        
+        Spacer(modifier = Modifier.height(24.dp))
+        
+        // Card de configuración
+        Card(
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Column(
+                modifier = Modifier.padding(16.dp)
+            ) {
+                Text(
+                    text = "Configuración",
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold
+                )
+                
+                Spacer(modifier = Modifier.height(16.dp))
+                
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Icon(Icons.Default.Language, contentDescription = null)
+                    Spacer(modifier = Modifier.width(16.dp))
+                    Text("Idioma: Español")
+                }
+                
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Icon(Icons.Default.LocationOn, contentDescription = null)
+                    Spacer(modifier = Modifier.width(16.dp))
+                    Text("País: Chile")
+                }
+                
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Icon(Icons.Default.Notifications, contentDescription = null)
+                    Spacer(modifier = Modifier.width(16.dp))
+                    Text("Notificaciones: Activadas")
                 }
             }
         }

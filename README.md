@@ -13,12 +13,29 @@
 
 ## Características principales
 
+- **Sistema de Autenticación:** Crea tu cuenta personal y mantén tus datos seguros con registro y login
 - Escaneo de etiquetas y análisis instantáneo
-- Sistema de puntos y recompensas
+- Sistema de puntos y recompensas personalizados
 - Billetera digital con tecnología Stellar
 - Tienda y donaciones enfocadas en Chile
 - Interfaz intuitiva y amigable
 - Logos de Stellar y Tellus destacados
+- **Perfil de Usuario:** Consulta tu progreso, estadísticas y configuración personal
+
+## Primeros Pasos con la App
+
+### Registro y Login
+Al abrir la aplicación por primera vez, deberás crear una cuenta:
+
+1. **Registro:** Ingresa tu nombre, email y una contraseña segura
+2. **Login:** Si ya tienes cuenta, simplemente inicia sesión con tu email y contraseña
+3. **Perfil:** Accede a tu perfil para ver tu progreso y estadísticas personales
+
+### Requisitos de Contraseña
+- Mínimo 6 caracteres
+- Al menos una letra mayúscula
+- Al menos una letra minúscula  
+- Al menos un número
 
 ---
 
@@ -70,6 +87,18 @@ No, solo sigue los pasos del tutorial.
 
 **¿La app es gratuita?**
 Sí, puedes usarla y compartirla libremente.
+
+**¿Mis datos están seguros?**
+Sí, utilizamos encriptación para proteger tu contraseña y mantenemos tus datos de forma segura.
+
+**¿Puedo cambiar mi contraseña?**
+Por ahora, si necesitas cambiar tu contraseña, puedes crear una nueva cuenta con un email diferente.
+
+**¿Qué pasa si olvido mi contraseña?**
+Por ahora, si olvidas tu contraseña, deberás crear una nueva cuenta. En futuras versiones añadiremos recuperación de contraseña.
+
+**¿Puedo usar la app sin crear cuenta?**
+No, necesitas crear una cuenta para acceder a todas las funciones de la aplicación y mantener tu progreso.
 
 **¿Qué hago si tengo problemas?**
 Revisa que Android Studio esté bien instalado y actualizado. Si tienes dudas, busca tutoriales en YouTube sobre "Cómo abrir un proyecto en Android Studio".
